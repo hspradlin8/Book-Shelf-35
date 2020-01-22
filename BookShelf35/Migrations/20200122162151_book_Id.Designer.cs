@@ -4,14 +4,16 @@ using BookShelf35.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookShelf35.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200122162151_book_Id")]
+    partial class book_Id
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,7 +98,7 @@ namespace BookShelf35.Migrations
                         {
                             Id = "00000000-ffff-ffff-ffff-ffffffffffff",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8a7578e2-d726-4c15-9c9c-24114fe3d274",
+                            ConcurrencyStamp = "c3a66e74-b279-4856-b994-194ec1567888",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             FirstName = "admin",
@@ -104,7 +106,7 @@ namespace BookShelf35.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBoN+viAgKBSB0ys8oaeMs20w9TyVWP7039PxVmgtPDQAlASfRGt+ifk9QPfHNpxTA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGp4rrcP5N8oBMrCE/w6ew7s+4WWLknLIZwWtrcbh2+e0iYTQtNsxEfpDnFKShsUbA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
                             TwoFactorEnabled = false,
@@ -200,7 +202,7 @@ namespace BookShelf35.Migrations
                         {
                             Id = 2,
                             ApplicationUserId = "00000000-ffff-ffff-ffff-ffffffffffff",
-                            AuthorId = 2,
+                            AuthorId = 1,
                             Genre = "Sandwiches",
                             Rating = 4,
                             Title = "Jersey Subs",
@@ -210,7 +212,7 @@ namespace BookShelf35.Migrations
                         {
                             Id = 3,
                             ApplicationUserId = "00000000-ffff-ffff-ffff-ffffffffffff",
-                            AuthorId = -3,
+                            AuthorId = 1,
                             Genre = "Instructural",
                             Rating = 1,
                             Title = "How to make a prison sandwich",
